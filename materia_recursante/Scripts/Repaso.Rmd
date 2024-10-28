@@ -1,0 +1,25 @@
+---
+title: "Repaso"
+output: html_document
+date: "2024-10-23"
+---
+
+[Mi primer imagen de Markdown](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdesego.com%2Ftienda%2Fcentrifugas%2Fcentrifuga-12-tubos-ck-12%2F&psig=AOvVaw2HI8MF6gD8Ej3aS7SSxt-I&ust=1729785698526000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDLk4bwpIkDFQAAAAAdAAAAABAE)
+
+```{r}
+carros <- c(1, 3, 6, 4, 9)
+
+plot(carros, type="o", col="blue")
+
+title(main="Autos", col.main="red", font.main=4)
+```
+
+![Tubos EDTA](images/21bvkYXQY9L._AC_UF1000,1000_QL80_.jpg)
+
+```{r}
+carritos<-mtcars
+knitr::kable(carritos, caption = "Tabla")
+
+```
+
+
