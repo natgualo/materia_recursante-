@@ -1,0 +1,67 @@
+---
+title: "Listas"
+output: html_document
+date: "2024-10-30"
+---
+
+EJERCICIO 1
+Crea una lista que contenga al menos cuatro tipos diferentes de datos (incluyendo al menos un vector, una matriz, y un data frame). Luego, escribe código para acceder a cada uno de estos elementos por su índice.
+
+```{r}
+lista <- list(
+  vector = c(5,9,10),
+  matriz = matrix(c(3,9,10,7), nrow = 2, ncol = 2),
+  data_frame = data.frame(iris)
+)
+
+lista
+
+lista$data_frame[1:50,5]
+lista$matriz [2,1]
+
+```
+
+
+EJERCICIO 2
+Añade un nuevo elemento a la compleja_lista que sea otra lista conteniendo información relevante a un experimento microbiológico (p.ej., fechas, resultados de crecimiento, tipo de medio de cultivo). Accede a un elemento específico dentro de esta lista anidada.
+
+```{r}
+lista2<-list(
+  lista, 
+  list(medios = "MConkey", "Agar sangre", "Agar chocolate", "Papa dextrosa", crecimiento = "logaritmico", "exponencial", "latencia"))
+lista2  
+
+lista2[[2]][[1]][1]
+```
+
+
+EJERCICIO 3
+Almacena datos de producción en experimentos de fermentación.
+
+Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.
+
+```{r}
+fermentacion<-list(
+  producto = "queso", "kefir", "kombucha", "vino rosado"
+)
+fermentacion
+```
+
+Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.
+
+```{r}
+fermentacion<-list(
+  producto = "queso", "kefir", "kombucha", "vino rosado",
+  list(cepa = "Lactobacillus", "Saccharomyces cerevisiae", "Acetobacter", "Malbec", 
+       condicion = "aerobica", "aerobica", "anaerobica", "aerobica",
+       etanol= c(3.5, 7, 2, 15))
+)
+```
+
+Encuentra la condición con la mayor producción de etanol.
+
+```{r}
+fermentacion[[4]][1]
+```
+
+
